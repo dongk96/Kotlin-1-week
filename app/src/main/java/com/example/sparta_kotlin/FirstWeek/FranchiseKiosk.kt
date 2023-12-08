@@ -173,12 +173,12 @@ fun main() {
                     }
                 }
             }
+
             5 -> {
                 if (myPocket.isEmpty()) {
                     println("장바구니가 비어있습니다.")
                     continue
-                }
-                else {
+                } else {
                     placeOrder(myPocket)
                     for (pocketItem in myPocket) {
                         if (pocketItem.quantity > 1) {
@@ -190,6 +190,7 @@ fun main() {
                     myPocket.clear()
                 }
             }
+
             6 -> {
                 println("진행하던 주문을 취소하시겠습니까?")
                 println("1. 확인      2. 취소")
@@ -200,6 +201,7 @@ fun main() {
                     println("주문이 취소되었습니다.\n")
                 }
             }
+
             0 -> {
                 var allPrices = 0.0
                 for (item in soldAllItem) {
@@ -216,7 +218,7 @@ fun main() {
                 println()
                 println("1. 돌아가기")
                 val option = readlnOrNull()?.toInt()
-                if(option == 1) continue
+                if (option == 1) continue
             }
         }
     }
